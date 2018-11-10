@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,33 +21,37 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var genderLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
-    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var genderTextField: UITextField!
     @IBOutlet weak var ageTextField: UITextField!
-    @IBOutlet weak var segment: UISegmentedControl!
-    var activePlayer = 1
-    var gameState = [0,0,0,0,0,0,0,0,0]
-    let winningCombinations = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
     
-    var gameIsActive = true
+    @IBOutlet weak var segment: UISegmentedControl!
     
     @IBOutlet weak var displayGameResultLabel: UILabel!
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.nameTextField.resignFirstResponder()
-        self.genderTextField.resignFirstResponder()
-        self.ageTextField.resignFirstResponder()
-        
+    @IBOutlet weak var registerView: UIView!
+    
+    @IBOutlet weak var ticTacToeView: UIView!
+    
+    var activePlayer = 1
+    var gameState = [0,0,0,0,0,0,0,0,0]
+    let winningCombinations = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
+    var gameIsActive = true
+    
+    //Delegation
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        nameTextField.resignFirstResponder()
+        ageTextField.resignFirstResponder()
+        genderTextField.resignFirstResponder()
+        return false
     }
+
     @IBAction func registerButton(_ sender: Any) {
         displayNameLabel.text = "Welcome " + nameTextField.text!
         registerView.isHidden = true
         ticTacToeView.isHidden = false
         segment.selectedSegmentIndex = 1
     }
-    
-    
     
     @IBAction func segmentControlButton(_ sender: Any) {
         if(segment.selectedSegmentIndex == 0){
@@ -59,12 +63,7 @@ class ViewController: UIViewController {
         }
         
     }
-    
-    @IBOutlet weak var registerView: UIView!
-    
-    @IBOutlet weak var ticTacToeView: UIView!
-    
- 
+
     @IBAction func action(_ sender: AnyObject) {
         if(gameState[sender.tag-1] == 0) && gameIsActive == true{
             gameState[sender.tag-1] = activePlayer
