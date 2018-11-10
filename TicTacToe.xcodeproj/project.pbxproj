@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A20496CB219656C000E61ABE /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = A20496C8219656C000E61ABE /* cross.png */; };
+		A20496CC219656C000E61ABE /* circle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A20496C9219656C000E61ABE /* circle.jpg */; };
+		A20496CD219656C000E61ABE /* squarebox.png in Resources */ = {isa = PBXBuildFile; fileRef = A20496CA219656C000E61ABE /* squarebox.png */; };
 		A2AC614B218C90D1002B59A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC614A218C90D1002B59A8 /* AppDelegate.swift */; };
 		A2AC614D218C90D1002B59A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC614C218C90D1002B59A8 /* ViewController.swift */; };
 		A2AC6150218C90D1002B59A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2AC614E218C90D1002B59A8 /* Main.storyboard */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A20496C8219656C000E61ABE /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
+		A20496C9219656C000E61ABE /* circle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = circle.jpg; sourceTree = "<group>"; };
+		A20496CA219656C000E61ABE /* squarebox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = squarebox.png; sourceTree = "<group>"; };
 		A2AC6147218C90D1002B59A8 /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2AC614A218C90D1002B59A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2AC614C218C90D1002B59A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +105,9 @@
 			children = (
 				A2AC614A218C90D1002B59A8 /* AppDelegate.swift */,
 				A2AC614C218C90D1002B59A8 /* ViewController.swift */,
+				A20496C9219656C000E61ABE /* circle.jpg */,
+				A20496C8219656C000E61ABE /* cross.png */,
+				A20496CA219656C000E61ABE /* squarebox.png */,
 				A2AC614E218C90D1002B59A8 /* Main.storyboard */,
 				A2AC6151218C90D4002B59A8 /* Assets.xcassets */,
 				A2AC6153218C90D4002B59A8 /* LaunchScreen.storyboard */,
@@ -229,8 +238,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A20496CC219656C000E61ABE /* circle.jpg in Resources */,
 				A2AC6155218C90D4002B59A8 /* LaunchScreen.storyboard in Resources */,
 				A2AC6152218C90D4002B59A8 /* Assets.xcassets in Resources */,
+				A20496CB219656C000E61ABE /* cross.png in Resources */,
+				A20496CD219656C000E61ABE /* squarebox.png in Resources */,
 				A2AC6150218C90D1002B59A8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
